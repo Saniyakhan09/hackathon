@@ -1,0 +1,323 @@
+/* App.css or Header.css if separate */
+/* @import "tailwindcss"; */
+
+.header {
+  text-align: center;
+  padding: 10px 0;
+   position: relative;
+  z-index: 2; /* ensures it's above video */
+  text-align: center;
+  padding: 10px 0;
+  background: transparent; /* or white if needed */
+}
+
+.logo {
+  height: 80px;
+  margin-bottom: 20px;
+}
+.nav {
+  position: relative; 
+  margin-bottom: -8px;
+  z-index: 2;  
+  background-color: #95755D;        /* Make sure it's above the video */
+}
+
+.nav ul {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+  transition: 0.2s;
+  font-size: 17px;
+  z-index: 2; /* Optional, since parent is already layered */
+}
+
+.nav a:hover,
+.nav a:focus {
+  text-decoration: underline;
+  color:#C8935A;
+}
+.hero-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  /* margin-top: -10px; */
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 ;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero-content button {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 30px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.hero-content button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.trending-collections {
+  padding: 2rem;
+  background-color: #fdf9f3;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.trending-collections h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.collections-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.collection-item {
+  flex: 1 1 200px;
+  max-width: 200px;
+  text-align: center;
+  /* color: #95755D; */
+}
+
+.collection-item img {
+  width: 100%;
+  height: auto;
+  /* border-radius: 8px; */
+}
+
+.collection-item p {
+  margin-top: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+.category-slider {
+  width: 100%;
+  padding: 2rem;
+}
+.category-slider h1{
+    color:#C8935A;
+
+
+}
+
+.slide {
+  position: relative;
+  /* overflow: hidden; */
+  /* border-radius: 12px; */
+}
+
+.slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  /* background: url("../assets/banner2.jpeg") center center / cover no-repeat; */
+  /* border-radius: 12px; */
+}
+
+.slide-text {
+  /* position: absolute; */
+  /* bottom: -10vh; */
+  /* top: 0; */
+  margin-top: 18px;
+  text-decoration: underline;
+  left: 20px;
+  font-size: 1rem;
+  color: #95755D;
+  /* font-weight: bold; */
+  text-transform: uppercase;
+  /* text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5); */
+}
+/* Override Swiper default navigation styles */
+.swiper-button-next,
+.swiper-button-prev {
+  color:  #95755D !important;              /* White arrow */
+  /* background-color: rgba(0, 0, 0, 0.6);  Semi-transparent black box */
+  border: 2px solid white;
+  padding: 5px;
+  /* border-radius: 50%; */
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: #fff;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 10px;
+}
+
+.split-banner {
+  display: flex;
+  margin-top: 10vh;
+  width: 100%;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.left-section {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.right-section {
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  text-align: left;
+    font-family: Arial, sans-serif;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem 5rem;
+   /* font-family: "Anton", sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase; */
+  margin: 1.2rem 0 0.3rem 0;
+  text-align: center;
+  letter-spacing: 0.15em;
+  color: #222;
+  /* color: black; */
+  max-width: 400px;
+    /* font-family: "Anton", sans-serif; */
+
+}
+
+.content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.content button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #95755D;
+  color: black;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.content button:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
+#section1,
+#section2 {
+  scroll-margin-top: 80px; /* if your navbar height is 80px */
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Add this in your global CSS or Tailwind config */
+.snap-container {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.snap-section {
+  scroll-snap-align: start;
+  height: 100vh;
+}
+/* Already present */
+.snap-container {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.snap-section {
+  scroll-snap-align: start;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* Extra responsiveness */
+@media (max-width: 768px) {
+  .snap-section {
+    height: auto;
+    min-height: 100vh;
+    padding: 1.5rem 1rem;
+  }
+}
